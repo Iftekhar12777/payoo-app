@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <!-- daisy ui and Tailwind CSS -->
+         <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <!-- font awesome cdn -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Payoo</title>
+
 </head>
-<body>
-    <h1 class="text-5xl font-bold">Welcome to the Home Page</h1>
+<body class="max-w-[450px] mx-auto">
+    <nav class="flex justify-between items-center p-4 mx-auto border-b-1 border-gray-400">
+        <div class="flex items-center gap-3">
+            <img class="w-12 h-12" src="./assets/Group.png" alt="Payoo Logo">
+            <div>
+                <h3 class="font-bold">$<span>45000</span></h3>
+                <p class="tex-[16px] text-gray-500">Available Balance</p>
+            </div>
+        </div>
+        <div>
+            <button class="btn text-gray-600"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>Log Out</button>
+        </div>
+    </nav>
+    <!-- menu section -->
+    <section class="my-6">
+            <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
+            <p class="text-gray-500 text-[16px]">Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </p>
+
+            <!-- cards hub -->
+             <div class="grid grid-cols-3 gap-5 mt-8">
+
+                <div class="border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                    <img src="./assets/wallet1.png" alt="" class="">
+                    <p class="text-[14px] text-gray-500">Add Money</p>
+                </div>
+
+                <div class="border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                    <img src="./assets/send1.png" alt="" class="">
+                    <p class="text-[14px] text-gray-500">Cashout</p>
+                </div>
+
+                <div class="border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                    <img src="./assets/money1.png" alt="" class="">
+                    <p class="text-[14px] text-gray-500 text-center">Transfer Money</p>
+                </div>
+
+                <div class="border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                    <img src="./assets/bonus1.png" alt="" class="">
+                    <p class="text-[14px] text-gray-500">Get Bonus</p>
+                </div>
+
+                <div class="border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                    <img src="./assets/purse1.png" alt="" class="">
+                    <p class="text-[14px] text-gray-500">Pay Bill</p>
+                </div>
+
+                <div class="border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                    <img src="./assets/transaction1.png" alt="" class="">
+                    <p class="text-[14px] text-gray-500">Transactions</p>
+                </div>
+             </div>
+    </section>
 </body>
 </html>
