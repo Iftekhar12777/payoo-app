@@ -4,7 +4,7 @@ document.getElementById("btn").addEventListener("click", function (event) {
     const pin = document.getElementById("pin").value;
     const mobileConverted = parseInt(mobile);
     const pinConverted = parseInt(pin);
-    const userMobile = 0123456789;
+    const userMobile = 12345678900;
     const userPin = 1234;
 
     if (mobileConverted == userMobile && pinConverted == userPin) {

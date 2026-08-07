@@ -19,12 +19,12 @@
         <div class="flex items-center gap-3">
             <img class="w-12 h-12" src="./assets/Group.png" alt="Payoo Logo">
             <div>
-                <h3 class="font-bold">$<span>45000</span></h3>
+                <h3 class="font-bold">$<span id="crnt-balance">45000</span></h3>
                 <p class="tex-[16px] text-gray-500">Available Balance</p>
             </div>
         </div>
         <div>
-            <button class="btn text-gray-600"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>Log Out</button>
+            <button id="logOut" class="btn text-gray-600"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>Log Out</button>
         </div>
     </nav>
     <!-- menu section -->
@@ -35,32 +35,32 @@
             <!-- cards hub -->
              <div class="grid grid-cols-3 gap-5 mt-8">
 
-                <div class="border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                <div id="togAddMoney" class=" menuBtn border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
                     <img src="./assets/wallet1.png" alt="" class="">
                     <p class="text-[14px] text-gray-500">Add Money</p>
                 </div>
 
-                <div class="border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                <div id="togCashOut" class=" menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
                     <img src="./assets/send1.png" alt="" class="">
                     <p class="text-[14px] text-gray-500">Cashout</p>
                 </div>
 
-                <div class="border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                <div class="menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
                     <img src="./assets/money1.png" alt="" class="">
                     <p class="text-[14px] text-gray-500 text-center">Transfer Money</p>
                 </div>
 
-                <div class="border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                <div class="menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
                     <img src="./assets/bonus1.png" alt="" class="">
                     <p class="text-[14px] text-gray-500">Get Bonus</p>
                 </div>
 
-                <div class="border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                <div class="menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
                     <img src="./assets/purse1.png" alt="" class="">
                     <p class="text-[14px] text-gray-500">Pay Bill</p>
                 </div>
 
-                <div class="border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                <div class="menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
                     <img src="./assets/transaction1.png" alt="" class="">
                     <p class="text-[14px] text-gray-500">Transactions</p>
                 </div>
@@ -68,13 +68,13 @@
     </section>
 
     <!-- Add money option -->
-     <section class="mt-8 border-1 border-gray-200 p-4">
+     <section id="addMoneySection" class="option mt-8 border-1 border-gray-200 p-4">
         <h1 class=" text-blue-600 text-xl font-semibold mb-4 border-b-1 border-gray-300 pb-2">💵 Add Money</h1>
         <div>
             <label class="mb-2 font-medium text-gray-600">Select a Bank</label>
              <br>
             <div>
-                <select class="select w-full mb-4">
+                <select id="bank" class="select w-full mb-4">
                     <option disabled selected>Select</option>
                     <option>AB Bank</option>
                     <option>IFIC Bank</option>
@@ -84,19 +84,57 @@
             <div>
              <label class="mb-2 font-medium text-gray-600">Bank Account Number</label>
              <br>
-             <input id="mobile" type="number" placeholder="Type here" class="input mb-4 w-full" />
+             <input id="ac-no" type="number" placeholder="Type here" class="input mb-4 w-full" />
             </div>
             <div>
              <label class="mb-2 font-medium text-gray-600">Amount to Add</label>
              <br>
-             <input id="mobile" type="number" placeholder="Type here" class="input mb-4 w-full" />
+             <input id="in-amount" type="number" placeholder="Type here" class="input mb-4 w-full" />
             </div>
             <div>
              <label class="mb-2 font-medium text-gray-600">Pin Number</label>
              <br>
-             <input id="mobile" type="number" placeholder="Type here" class="input mb-4 w-full" />
+             <input id="ac-pin" type="number" placeholder="Type here" class="input mb-4 w-full" />
             </div>
         </div>
+                <button id="addMoneyBtn" class="btn bg-blue-600 text-white w-full">Add Money</button>
      </section>
+     <!-- Cash Out -->
+     <section id="cashOutSection" class="option mt-8 border-1 border-gray-200 p-4 hidden">
+        <h1 class=" text-red-600 text-xl font-semibold mb-4 border-b-1 border-gray-300 pb-2">💵 Cash Out</h1>
+        <div>
+            <label class="mb-2 font-medium text-gray-600">Select a Bank</label>
+             <br>
+            <div>
+                <select id="cashout-bank" class="select w-full mb-4">
+                    <option disabled selected>Select</option>
+                    <option>AB Bank</option>
+                    <option>IFIC Bank</option>
+                    <option>Dutch Bangla Bank</option>
+                </select>
+            </div>
+            <div>
+             <label class="mb-2 font-medium text-gray-600">Bank Account Number</label>
+             <br>
+             <input id="cashout-ac-no" type="number" placeholder="Type here" class="input mb-4 w-full" />
+            </div>
+            <div>
+             <label class="mb-2 font-medium text-gray-600">Amount to Cash Out</label>
+             <br>
+             <input id="cashout-amount" type="number" placeholder="Type here" class="input mb-4 w-full" />
+            </div>
+            <div>
+             <label class="mb-2 font-medium text-gray-600">Pin Number</label>
+             <br>
+             <input id="cashout-pin" type="number" placeholder="Type here" class="input mb-4 w-full" />
+            </div>
+        </div>
+                <button id="cashOutBtn" class="btn bg-red-600 text-white w-full">Cash Out</button>
+     </section>
+
+     <script src="js/addMoney.js"></script> 
+     <script src="js/logOut.js"></script>
+     <script src="js/cashOut.js"></script>
+     <script src="js/toggle.js"></script>
 </body>
 </html>
