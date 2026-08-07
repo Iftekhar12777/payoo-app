@@ -37,7 +37,7 @@
 
                 <div id="togAddMoney" class=" menuBtn border-1 border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
                     <img src="./assets/wallet1.png" alt="" class="">
-                    <p class="text-[14px] text-gray-500">Add Money</p>
+                    <p class="text-[14px] text-gray-500 active:text-[#0874F2] cursor-pointer">Add Money</p>
                 </div>
 
                 <div id="togCashOut" class=" menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
@@ -45,17 +45,17 @@
                     <p class="text-[14px] text-gray-500">Cashout</p>
                 </div>
 
-                <div class="menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                <div id="togTransferMoney" class="menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
                     <img src="./assets/money1.png" alt="" class="">
                     <p class="text-[14px] text-gray-500 text-center">Transfer Money</p>
                 </div>
 
-                <div class="menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                <div id="togGetBonus" class="menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
                     <img src="./assets/bonus1.png" alt="" class="">
                     <p class="text-[14px] text-gray-500">Get Bonus</p>
                 </div>
 
-                <div class="menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                <div id="togPayBill" class="menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
                     <img src="./assets/purse1.png" alt="" class="">
                     <p class="text-[14px] text-gray-500">Pay Bill</p>
                 </div>
@@ -68,7 +68,7 @@
     </section>
 
     <!-- Add money option -->
-     <section id="addMoneySection" class="option mt-8 border-1 border-gray-200 p-4">
+     <section id="addMoneySection" class="option mt-8 border border-gray-200 p-4">
         <h1 class=" text-blue-600 text-xl font-semibold mb-4 border-b-1 border-gray-300 pb-2">💵 Add Money</h1>
         <div>
             <label class="mb-2 font-medium text-gray-600">Select a Bank</label>
@@ -100,7 +100,7 @@
                 <button id="addMoneyBtn" class="btn bg-blue-600 text-white w-full">Add Money</button>
      </section>
      <!-- Cash Out -->
-     <section id="cashOutSection" class="option mt-8 border-1 border-gray-200 p-4 hidden">
+     <section id="cashOutSection" class="option mt-8 border border-gray-200 p-4 hidden">
         <h1 class=" text-red-600 text-xl font-semibold mb-4 border-b-1 border-gray-300 pb-2">💵 Cash Out</h1>
         <div>
             <label class="mb-2 font-medium text-gray-600">Select a Bank</label>
@@ -131,10 +131,70 @@
         </div>
                 <button id="cashOutBtn" class="btn bg-red-600 text-white w-full">Cash Out</button>
      </section>
+     <!-- Transfer Money -->
+     <section id="transferMoneySection" class="option mt-8 border border-gray-200 p-4 hidden">
+        <h1 class=" text-yellow-600 text-xl font-semibold mb-4 border-b-1 border-gray-300 pb-2">💵 Transfer Money</h1>
+        <div>
+            <label class="mb-2 font-medium text-gray-600">Recipient's Account Number</label>
+             <br>
+            <input id="recipient-ac" type="number" placeholder="Type here" class="input mb-4 w-full" />
+        </div>
+        <div>
+             <label class="mb-2 font-medium text-gray-600">Amount to Transfer</label>
+             <br>
+             <input id="transfer-amount" type="number" placeholder="Type here" class="input mb-4 w-full" />
+        </div>
+        <div>
+             <label class="mb-2 font-medium text-gray-600">Pin Number</label>
+             <br>
+             <input id="transfer-pin" type="number" placeholder="Type here" class="input mb-4 w-full" />
+        </div>
+        <button id="transferMoneyBtn" class="btn bg-yellow-600 text-white w-full">Transfer Money</button>
+     </section>
+     <!-- get bonus -->
+     <section id="getBonusSection" class="option mt-8 border border-gray-200 p-4 hidden">
+        <h1 class=" text-green-600 text-xl font-semibold mb-4 border-b-1 border-gray-300 pb-2">🎁 Get Bonus</h1>
+        <input id="bonus-code" type="text" placeholder="Enter Bonus Code" class="input mb-4 w-full" />
+        <br>
+        <button id="getBonusBtn" class="btn bg-green-600 text-white w-full">Get Bonus</button>
+     </section>
+     <!-- pay bill -->
+     <section id="payBillSection" class="option mt-8 border border-gray-200 p-4 hidden">
+        <h1 class=" text-blue-600 text-xl font-semibold mb-4 border-b-1 border-gray-300 pb-2">🧾 Pay Bill</h1>
+        <div>
+            <label class="mb-2 font-medium text-gray-600">Bill Type</label>
+             <br>
+            <select id="bill-type" class="select w-full mb-4">
+                <option disabled selected>Select</option>
+                <option>Electricity</option>
+                <option>Water</option>
+                <option>Gas</option>
+            </select>
+        </div>
+        <div>
+             <label class="mb-2 font-medium text-gray-600">Bill Amount</label>
+             <br>
+             <input id="bill-amount" type="number" placeholder="Type here" class="input mb-4 w-full" />
+        </div>
+        <div>
+             <label class="mb-2 font-medium text-gray-600">Bill Account Number</label>
+             <br>
+             <input id="bill-ac" type="number" placeholder="Type here" class="input mb-4 w-full" />
+        </div>
+        <div>
+             <label class="mb-2 font-medium text-gray-600">Pin Number</label>
+             <br>
+             <input id="bill-pin" type="number" placeholder="Type here" class="input mb-4 w-full" />
+        </div>
+        <button id="payBillBtn" class="btn bg-blue-600 text-white w-full">Pay Bill</button>
+     </section>
 
      <script src="js/addMoney.js"></script> 
      <script src="js/logOut.js"></script>
      <script src="js/cashOut.js"></script>
      <script src="js/toggle.js"></script>
+     <script src="js/transferMoney.js"></script>
+     <script src="js/getBonus.js"></script>
+     <script src="js/payBill.js"></script>
 </body>
 </html>
