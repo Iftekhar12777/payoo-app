@@ -60,7 +60,7 @@
                     <p class="text-[14px] text-gray-500">Pay Bill</p>
                 </div>
 
-                <div class="menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
+                <div id="togTransAction" class="menuBtn border border-gray-200 rounded-lg p-4 flex flex-col justify-center items-center gap-2">
                     <img src="./assets/transaction1.png" alt="" class="">
                     <p class="text-[14px] text-gray-500">Transactions</p>
                 </div>
@@ -189,33 +189,23 @@
         <button id="payBillBtn" class="btn bg-blue-600 text-white w-full">Pay Bill</button>
      </section>
      <!-- transaction history -->
-      <section id="transHistory">
-            <div class="p-4 border border-gray-200 mt-5">
-                <div class="flex justify-between items-center">
+      <section id="transHistory" class="option p-4 border border-gray-200 mt-6 hidden">
+            <div class="flex justify-between items-center">
                     <h3 class="text-xl font-bold">Transaction History</h3>
                     <p class="text-[14px] text-gray-400">View All</p>
                 </div>
+                <div id="transData">
 
-                <div class="flex gap-4 mt-4 bg-slate-100 p-4 rounded-lg">
-                    <img class="p-3 bg-slate-200 rounded-4xl" src="./assets/wallet1.png" alt="">
-
-                    <div class="flex justify-between items-center w-full">
-                        <div>
-                            <h3 class="text-[16px] font-semibold">Add Money</h3>
-                            <p class="text-[12px]"> Today 01:30 PM</p>
-                        </div>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
                 </div>
-            </div>
       </section>
 
-     <script src="js/addMoney.js"></script> 
+     <script src="js/home.js"></script> 
      <script src="js/logOut.js"></script>
-     <script src="js/cashOut.js"></script>
+     
      <script src="js/toggle.js"></script>
-     <script src="js/transferMoney.js"></script>
-     <script src="js/getBonus.js"></script>
-     <script src="js/payBill.js"></script>
+     
+     
+     
+     
 </body>
 </html>

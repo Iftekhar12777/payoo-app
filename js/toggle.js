@@ -55,3 +55,8 @@ document.getElementById("togPayBill").addEventListener("click", function () {
     toggleSections("payBillSection");
     activeColor("togPayBill");
 });
+
+document.getElementById("togTransAction").addEventListener("click", function(){
+    toggleSections("transHistory");
+    activeColor("togTransAction");
+})
